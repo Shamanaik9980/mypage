@@ -1,0 +1,71 @@
+/* TaskColumn.css */
+
+/* Default task column styles */
+.task-column {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  /* Default width for columns */
+  width: 30%;
+}
+
+/* Specifically target the Task Name column */
+.task-name-column {
+  width: 50%; /* Increase the width of the Task Name column */
+}
+
+/* Specifically target the Due Date column */
+.due-date {
+  font-size: 14px;
+  /* Blue color for due date */
+  font-weight: bold;
+  margin-top: 1px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #f0f8ff; /* Light background for due date */
+}
+
+.task-column h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.task {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.task h4 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.task ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.task ul li {
+  font-size: 14px;
+  color: #555;
+}
+
+.add-task-button {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.add-task-button:hover {
+  background-color: #005bb5;
+}
