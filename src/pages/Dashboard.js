@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import TaskBoard from "../components/TaskBoard";
-import "./dashboard.css";
+import "./Dashboard.css"; // Dashboard-specific styling
 
 const Dashboard = () => {
   return (
@@ -10,7 +10,8 @@ const Dashboard = () => {
       <Sidebar />
       <div className="main-content">
         <Header />
-        <TaskBoard />
+        <TaskBoard />{" "}
+        {/* Display TaskBoard or any other relevant component here */}
       </div>
     </div>
   );

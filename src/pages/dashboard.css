@@ -1,8 +1,49 @@
+/* src/styles/Dashboard.css */
+
 .dashboard {
+    display: flex;
+  }
+  
+  .main-content {
+    margin-left: 250px; /* Width of the sidebar */
+    width: calc(100% - 250px);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .main-content > .header {
+    flex: 0 0 auto;
+  }
+  
+  .main-content > .taskboard,
+  .main-content > .task-details {
+    flex: 1 1 auto;
+    overflow-y: auto;
+  }
+  .dashboard {
   display: flex;
 }
 
 .main-content {
-  flex: 1;
-  padding-left: 250px;
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: white;
+}
+
+.header {
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-board {
+  margin-top: 20px;
+  /* Add additional styling for TaskBoard */
 }

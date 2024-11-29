@@ -1,119 +1,137 @@
-/* taskboard.css */
+/* src/styles/TaskBoard.css */
 
-/* General layout of the taskboard */
 .taskboard {
-    margin-left: 270px;
-    padding: 20px;
-    flex: 1;
-  }
-  
-  /* Taskboard header styling */
-  .taskboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-    background-color: #ffffff; /* White background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    font-weight: bold; /* Bold font for title */
-  }
-  /* Styling for the view options buttons */
-  .view-options button {
-    margin-left: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .view-options button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Using grid layout for task columns */
-  .taskboard-columns {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
-    margin-top: 20px;
-    margin-right: 200px;
-  }
-  
-  
-  /* Individual task columns (Task Name, Assignee, Due Date, etc.) */
-  .task-column {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    /* Ensuring column width fills the available space */
-    width: 100%;
-  }
-  
-  /* Styling for the column titles */
-  .task-column h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: left;  /* Center-align the title */
-  }
-  
-  /* Task styling inside columns */
-  .task {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 5px;
-  }
-  
-  /* Styling for individual task names */
-  .task h4 {
-    font-size: 16px;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  /* Styling for task points */
-  .task ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  .task ul li {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  /* Button to add task styling */
-  .add-task-button {
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .add-task-button:hover {
-    background-color: #005bb5;
-  }
-  
-  /* Specifically target the Due Date column */
-  .due-date {
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 1px;
-    display: inline-block;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #f0f8ff; /* Light background for due date */
-    text-align: center;  /* Center-align due date */
-  }
-  
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.taskboard-header {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 50px;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  font-weight: bold;
+  color: #495057;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.header-cell {
+  padding: 10px;
+  text-align: left;
+}
+
+.add-btn {
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.taskboard-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.task-row {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 50px;
+  background-color: #ffffff;
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-row:hover {
+  background-color: #e3f2fd;
+}
+
+.task-cell {
+  padding: 10px;
+}
+
+.assignees {
+  display: flex;
+  gap: 0px;
+}
+
+.assignee-badge {
+  background-color: #1abc9c;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.add-task-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-btn:hover {
+  background-color: #0056b3;
+}
+
+.add-task {
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task:hover {
+  background-color: #0056b3;
+}
+
+.add-stage {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-stage:hover {
+  background-color: #218838;
+}
+.assignee-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensure the image covers the container */
+  margin-right: 0; /* Remove space between images */
+  border: 2px solid #ffffff; /* Optional: border around image */
+}
+

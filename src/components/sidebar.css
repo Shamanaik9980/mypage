@@ -1,70 +1,88 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar container */
 .sidebar {
-    width: 200px;
-    background: #f4f5f7;
-    padding: 20px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-    height: 100vh;
-    position: static;
-    margin-top: 140px;
+  position: fixed; /* Make the sidebar fixed */
+  top: 0150; /* Align it to the top */
+  left: 60; /* Align it to the left side */
+  width: 2900px; /* Sidebar width */
+  height: 100%; /* Full height */
+  background-color: #f0f0f1; /* Dark background for the sidebar */
+  color: rgb(19, 18, 18);
+  padding: 20px; /* Add padding for spacing */
+  z-index: 1000; /* Ensure it's above other content */
+  overflow-y: auto; /* Make the sidebar scrollable if content overflows */
+}
+
+/* Sidebar title */
+.sidebar-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Menu styling */
+.menu,
+.favorites,
+.docs {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.menu li,
+.favorites li,
+.docs li {
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu li:hover,
+.favorites li:hover,
+.docs li:hover {
+  background-color: #e4f2ff; /* Darken on hover */
+}
+
+/* Heading style for subsections */
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Ensure the main content starts below the sidebar */
+main {
+  margin-left: 250px; /* Space for sidebar */
+  padding: 20px;
+  width: calc(100% - 250px); /* Take the remaining space */
+  height: 100vh; /* Ensure content takes full height */
+  overflow-y: auto; /* Make the main content scrollable if necessary */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .sidebar {
+    position: static; /* Make sidebar scrollable with the content */
+    width: 100%;
+    height: auto;
   }
   
-  .sidebar-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
+  main {
+    margin-left: 0;
+    width: 100%;
   }
-  
-  .menu,
-  .favorites {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu li,
-  .favorites li {
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  
-  .menu li:hover,
-  .favorites li:hover {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .favorites {
-    margin-top: 20px;
-  }
-  .menu,
-  .docs {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .menu li,
-  .docs li {
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  
-  .menu li:hover,
-  .docs li:hover {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .docs {
-    margin-top: 20px;
-  }
-  
+}
