@@ -1,4 +1,3 @@
-// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
@@ -7,7 +6,9 @@ import "./index.css"; // Global styles
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/mypage">
+      {" "}
+      {/* Add basename here */}
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/task-details/:id" element={<TaskDetailsPage />} />
